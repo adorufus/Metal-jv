@@ -5,11 +5,11 @@ import org.lwjgl.glfw.GLFWErrorCallback;
 import java.io.PrintStream;
 
 public class Utilities {
-    public static void Print(String msg){
+    public static void Print(Object msg){
         System.out.println(msg);
     }
 
-    public static void PrintErr(String msg){
+    public static void PrintErr(Object msg){
         System.err.println(msg);
     }
 
