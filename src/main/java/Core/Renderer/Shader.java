@@ -1,6 +1,5 @@
 package Core.Renderer;
 
-import Utils.Utilities;
 import org.joml.*;
 import org.lwjgl.BufferUtils;
 
@@ -10,6 +9,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
+import static Utils.Utilities.Print;
 import static org.lwjgl.opengl.GL11.GL_FALSE;
 import static org.lwjgl.opengl.GL20.*;
 import static org.lwjgl.opengl.GL20.glGetShaderInfoLog;
@@ -60,8 +60,8 @@ public class Shader {
             assert false : "Error: could not open file for shader: '" + filePath + "'";
         }
 
-        Utilities.Print("vertexSource: " + vertexSource);
-        Utilities.Print("fragmentSource: " + fragmentSource);
+        Print("vertexSource: " + vertexSource);
+        Print("fragmentSource: " + fragmentSource);
     }
 
     public void compile() {
@@ -78,8 +78,8 @@ public class Shader {
         int success = glGetShaderi(vertexID, GL_COMPILE_STATUS);
         if(success == GL_FALSE){
             int len = glGetShaderi(vertexID, GL_INFO_LOG_LENGTH);
-            Utilities.Print("ERROR: '" + filePath + "'\n\tVertex shader compilation failed!" );
-            Utilities.Print("Reason: " + glGetShaderInfoLog(vertexID, len));
+            Print("ERROR: '" + filePath + "'\n\tVertex shader compilation failed!" );
+            Print("Reason: " + glGetShaderInfoLog(vertexID, len));
             assert false : "";
         }
 
@@ -93,8 +93,8 @@ public class Shader {
         success = glGetShaderi(fragmentID, GL_COMPILE_STATUS);
         if(success == GL_FALSE){
             int len = glGetShaderi(fragmentID, GL_INFO_LOG_LENGTH);
-            Utilities.Print("ERROR: ''" + filePath + "'\n\tfragment shader compilation failed!" );
-            Utilities.Print("Reason: " + glGetShaderInfoLog(fragmentID, len));
+            Print("ERROR: ''" + filePath + "'\n\tfragment shader compilation failed!" );
+            Print("Reason: " + glGetShaderInfoLog(fragmentID, len));
             assert false : "";
         }
 
@@ -107,8 +107,8 @@ public class Shader {
         success = glGetProgrami(shaderProgramID, GL_LINK_STATUS);
         if(success == GL_FALSE){
             int len = glGetProgrami(shaderProgramID, GL_INFO_LOG_LENGTH);
-            Utilities.Print("ERROR: '" + filePath + "'\n\tLinking shader failed" );
-            Utilities.Print("Reason: \n" + glGetShaderInfoLog(shaderProgramID, len));
+            Print("ERROR: '" + filePath + "'\n\tLinking shader failed" );
+            Print("Reason: \n" + glGetShaderInfoLog(shaderProgramID, len));
             assert false : "";
         }
     }

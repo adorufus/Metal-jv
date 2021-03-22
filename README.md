@@ -1,2 +1,2 @@
 # Metal-jv
-Metal Game Engine with java + lwjgl
+Open Source Game Engine with java + lwjgl

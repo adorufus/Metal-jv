@@ -1,17 +1,20 @@
 package Core.Scenes;
 
 import Core.Camera;
+import Core.Components.FontRenderer;
+import Core.Components.SpriteRenderer;
+import Core.GameObject;
 import Core.Renderer.Shader;
 import Core.Renderer.Texture;
 import Core.Scene;
 import Utils.Time;
-import Utils.Utilities;
 import org.joml.Vector2f;
 import org.lwjgl.BufferUtils;
 
 import java.nio.FloatBuffer;
 import java.nio.IntBuffer;
 
+import static Utils.Utilities.Print;
 import static org.lwjgl.opengl.GL20.*;
 import static org.lwjgl.opengl.GL30.glBindVertexArray;
 import static org.lwjgl.opengl.GL30.glGenVertexArrays;
@@ -35,6 +38,9 @@ public class LevelEditorScene extends Scene {
     private int vaoID, vboID, eboID;
     private Shader defaultShader;
     private Texture texture;
+    private boolean firstTime = false;
+
+    GameObject testObject;
 
     public LevelEditorScene(){
 
@@ -42,6 +48,13 @@ public class LevelEditorScene extends Scene {
 
     @Override
     public void init() {
+
+        Print("Creating test game object");
+        this.testObject = new GameObject("Mek");
+        this.testObject.addComponent(new SpriteRenderer());
+        this.testObject.addComponent(new FontRenderer());
+        this.addGameObjectToScene(this.testObject);
+
         this.camera = new Camera(new Vector2f(-200, -300));
         defaultShader = new Shader("assets/Shaders/default.glsl");
         defaultShader.compile();
@@ -113,5 +126,17 @@ public class LevelEditorScene extends Scene {
         glBindVertexArray(0);
 
         defaultShader.detach();
+
+        if(!firstTime){
+            GameObject gameObject = new GameObject("Game object 2");
+            gameObject.addComponent(new SpriteRenderer());
+            this.addGameObjectToScene(gameObject);
+
+            firstTime = true;
+        }
+
+        for(GameObject go : this.gameObjects) {
+            go.update(dt);
+        }
     }
 }

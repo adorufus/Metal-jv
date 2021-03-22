@@ -1,23 +1,31 @@
-Core/Events/KeyListener.java
- Core.Events.KeyListener
 Core/Events/MouseListener.java
  Core.Events.MouseListener
-Utils/Utilities.java
- Utils.Utilities
-Utils/Time.java
- Utils.Time
-Main.java
- Main
-Core/Camera.java
- Core.Camera
-Core/Scene.java
- Core.Scene
-Core/Scenes/LevelScene.java
- Core.Scenes.LevelScene
 Core/Renderer/Texture.java
  Core.Renderer.Texture
+Core/Camera.java
+ Core.Camera
+Core/Events/KeyListener.java
+ Core.Events.KeyListener
+Utils/Time.java
+ Utils.Time
 Core/Renderer/Shader.java
  Core.Renderer.Shader
+Utils/Utilities.java
+ Utils.Utilities
+Main.java
+ Main
+Core/Scene.java
+ Core.Scene
+Core/Components/SpriteRenderer.java
+ Core.Components.SpriteRenderer
+Core/Scenes/LevelScene.java
+ Core.Scenes.LevelScene
+Core/GameObject.java
+ Core.GameObject
+Core/Component.java
+ Core.Component
+Core/Components/FontRenderer.java
+ Core.Components.FontRenderer
 Core/Window.java
  Core.Window
 Core/Scenes/LevelEditorScene.java

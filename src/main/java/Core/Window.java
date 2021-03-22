@@ -5,11 +5,11 @@ import Core.Events.MouseListener;
 import Core.Scenes.LevelEditorScene;
 import Core.Scenes.LevelScene;
 import Utils.Time;
-import Utils.Utilities;
 import org.lwjgl.glfw.GLFWErrorCallback;
 import org.lwjgl.opengl.GL;
 import org.lwjgl.opengl.GLUtil;
 
+import static Utils.Utilities.Print;
 import static org.lwjgl.glfw.Callbacks.glfwFreeCallbacks;
 import static org.lwjgl.glfw.GLFW.*;
 import static org.lwjgl.opengl.GL11.*;
@@ -41,10 +41,12 @@ public class Window {
             case 0:
                 currentScene = new LevelEditorScene();
                 currentScene.init();
+                currentScene.start();
                 break;
             case 1:
                 currentScene = new LevelScene();
                 currentScene.init();
+                currentScene.start();
                 break;
             default:
                 assert false : "Unknown scene '" + newScene + "'";
@@ -60,7 +62,7 @@ public class Window {
     }
 
     public void run() {
-        Utilities.Print("Engine Running: " + "");
+        Print("Engine Running: " + "");
 
         init();
         update();
@@ -73,7 +75,7 @@ public class Window {
     }
 
     public void init() {
-        Utilities.Print("Initializing...");
+        Print("Initializing...");
         GLFWErrorCallback.createPrint(System.err).set();
 
         // Initialize GLFW
