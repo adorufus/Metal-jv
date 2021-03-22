@@ -6,8 +6,8 @@ Core/Camera.java
  Core.Camera
 Core/Events/KeyListener.java
  Core.Events.KeyListener
-Utils/Time.java
- Utils.Time
+Core/Scenes/LevelEditorScene.java
+ Core.Scenes.LevelEditorScene
 Utils/Utilities.java
  Utils.Utilities
 Core/Components/FontRenderer.java
@@ -22,8 +22,8 @@ Core/Component.java
  Core.Component
 Core/Components/SpriteRenderer.java
  Core.Components.SpriteRenderer
-Main.java
- Main
+Utils/AssetPool.java
+ Utils.AssetPool
 Core/Scenes/LevelScene.java
  Core.Scenes.LevelScene
 Core/Scene.java
@@ -32,9 +32,7 @@ Core/Renderer/Renderer.java
  Core.Renderer.Renderer
 Core/Renderer/RenderBatch.java
  Core.Renderer.RenderBatch
+Main.java
+ Main
 Core/Window.java
  Core.Window
-Utils/AssetPool.java
- Utils.AssetPool
-Core/Scenes/LevelEditorScene.java
- Core.Scenes.LevelEditorScene

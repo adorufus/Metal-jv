@@ -4,7 +4,6 @@ import Core.Events.KeyListener;
 import Core.Events.MouseListener;
 import Core.Scenes.LevelEditorScene;
 import Core.Scenes.LevelScene;
-import Utils.Time;
 import org.lwjgl.glfw.GLFWErrorCallback;
 import org.lwjgl.opengl.GL;
 import org.lwjgl.opengl.GLUtil;
@@ -129,7 +128,7 @@ public class Window {
 
     public void update() {
 
-        float beginTime = Time.getTime();
+        float beginTime = (float)glfwGetTime();
         float endTime;
         float dt = -1.0f;
 
@@ -146,7 +145,7 @@ public class Window {
 
             glfwSwapBuffers(glfwWindow);
 
-            endTime = Time.getTime();
+            endTime = (float)glfwGetTime();
             dt = endTime - beginTime;
             beginTime = endTime;
         }
