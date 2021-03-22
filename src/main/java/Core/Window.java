@@ -19,6 +19,7 @@ public class Window {
     private int width, height;
     private String title;
     private long glfwWindow;
+
     public float r, g, b ,a;
     private boolean fadeToBlack;
 
@@ -30,9 +31,9 @@ public class Window {
         this.width = 1920;
         this.height = 1080;
         this.title = "Metal-Jv";
-        this.r = 1;
-        this.g = 1;
-        this.b = 1;
+        this.r = .1f;
+        this.g = .1f;
+        this.b = .1f;
         this.a = 1;
     }
 
@@ -59,6 +60,10 @@ public class Window {
         }
 
         return Window.window;
+    }
+
+    public static Scene getScene() {
+        return get().currentScene;
     }
 
     public void run() {
