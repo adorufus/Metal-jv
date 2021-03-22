@@ -8,10 +8,16 @@ Utils/Time.java
  Utils.Time
 Main.java
  Main
+Core/Camera.java
+ Core.Camera
 Core/Scene.java
  Core.Scene
 Core/Scenes/LevelScene.java
  Core.Scenes.LevelScene
+Core/Renderer/Texture.java
+ Core.Renderer.Texture
+Core/Renderer/Shader.java
+ Core.Renderer.Shader
 Core/Window.java
  Core.Window
 Core/Scenes/LevelEditorScene.java

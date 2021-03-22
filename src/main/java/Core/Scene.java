@@ -1,9 +1,13 @@
 package Core;
 
+import org.joml.Vector2f;
+
 public abstract class Scene {
 
-    public Scene(){
+    protected Camera camera;
 
+    public Scene(){
+        this.camera = new Camera(new Vector2f());
     }
 
     public void init() {}
