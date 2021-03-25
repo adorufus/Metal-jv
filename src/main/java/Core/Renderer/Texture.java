@@ -16,7 +16,11 @@ public class Texture {
     private int textureID;
     private int height, width;
 
-    public Texture (String filePath) {
+//    public Texture (String filePath) {
+//
+//    }
+
+    public void init(String filePath) {
         this.filePath = filePath;
 
         //generate texture on GPu
