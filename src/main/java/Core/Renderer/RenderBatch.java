@@ -104,9 +104,25 @@ public class RenderBatch {
     }
 
     public void render() {
-        //rebuffer all data every frame
-        glBindBuffer(GL_ARRAY_BUFFER, vboID);
-        glBufferSubData(GL_ARRAY_BUFFER, 0, vertices);
+//        //rebuffer all data every frame
+//        glBindBuffer(GL_ARRAY_BUFFER, vboID);
+//        glBufferSubData(GL_ARRAY_BUFFER, 0, vertices);
+
+        boolean rebufferData = false;
+
+        for(int i = 0; i < numSprites; i++){
+            SpriteRenderer spr = sprites[i];
+            if(spr.isDirty()){
+                loadVertexProperties(i);
+                spr.setClean();
+                rebufferData = true;
+            }
+        }
+
+        if(rebufferData){
+            glBindBuffer(GL_ARRAY_BUFFER, vboID);
+            glBufferSubData(GL_ARRAY_BUFFER, 0, vertices);
+        }
 
         //use shader
         shader.use();
@@ -217,5 +233,13 @@ public class RenderBatch {
 
     public boolean hasRoom() {
         return this.hasRoom;
+    }
+
+    public boolean hasTextureRoom() {
+        return this.textures.size() < 8;
+    }
+
+    public boolean hasTexture(Texture tex) {
+        return this.textures.contains(tex);
     }
 }

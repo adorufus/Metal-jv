@@ -1,5 +1,6 @@
 package Core.Renderer;
 
+import Utils.Utilities;
 import org.lwjgl.BufferUtils;
 
 import java.nio.Buffer;
@@ -13,6 +14,7 @@ public class Texture {
 
     private String filePath;
     private int textureID;
+    private int height, width;
 
     public Texture (String filePath) {
         this.filePath = filePath;
@@ -37,6 +39,11 @@ public class Texture {
         ByteBuffer image = stbi_load(filePath, width, height, channels, 0);
 
         if(image != null){
+            this.width = width.get(0);
+            this.height = height.get(0);
+
+            Utilities.Print("Current Texture Channel: " + channels.get(0));
+
             if(channels.get(0) == 3){
                 glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width.get(0), height.get(0), 0, GL_RGB, GL_UNSIGNED_BYTE, image);
             } else if(channels.get(0) == 4){
@@ -57,5 +64,13 @@ public class Texture {
 
     public void unbind() {
         glBindTexture(GL_TEXTURE_2D, 0);
+    }
+
+    public int getHeight() {
+        return this.height;
+    }
+
+    public int getWidth() {
+        return this.width;
     }
 }

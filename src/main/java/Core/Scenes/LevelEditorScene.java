@@ -1,7 +1,9 @@
 package Core.Scenes;
 
 import Core.Camera;
+import Core.Components.Sprite;
 import Core.Components.SpriteRenderer;
+import Core.Components.Spritesheet;
 import Core.GameObject;
 import Core.Scene;
 import Core.Transform;
@@ -13,17 +15,23 @@ import static Utils.Utilities.Print;
 
 public class LevelEditorScene extends Scene {
 
+    private GameObject mario;
+    private Spritesheet sprites;
+
     public LevelEditorScene(){
 
     }
 
     @Override
     public void init() {
-        this.camera = new Camera(new Vector2f(-250, 0));
+        loadResources();
 
-        GameObject obj1 = new GameObject("Player", new Transform(new Vector2f(100, 100), new Vector2f(256, 256)));
-        obj1.addComponent(new SpriteRenderer(AssetPool.getTexture("assets/texture.jpg")));
-        this.addGameObjectToScene(obj1);
+        this.camera = new Camera(new Vector2f(-250, 0));
+        sprites = AssetPool.getSpritesheet("assets/images/sprites/spritesheet.png");
+
+        mario = new GameObject("Player", new Transform(new Vector2f(100, 100), new Vector2f(256, 256)));
+        mario.addComponent(new SpriteRenderer(sprites.getSprite(5)));
+        this.addGameObjectToScene(mario);
 
 //        int xOffset = 10;
 //        int yOffset = 10;
@@ -45,17 +53,32 @@ public class LevelEditorScene extends Scene {
 //            }
 //        }
 
-        loadResources();
+
     }
 
     private void loadResources() {
         AssetPool.getShader("assets/Shaders/default.glsl");
+        AssetPool.addSpriteSheet("assets/images/sprites/spritesheet.png", new Spritesheet(AssetPool.getTexture("assets/images/sprites/spritesheet.png"), 16, 16, 26, 0, 0));
     }
+
+    private int spriteIndex = 0;
+    private float spriteFlipTime = 0.2f;
+    private float spriteFlipTimeLeft = 0.0f;
 
     @Override
     public void update(float dt) {
 
         Print("FPS: " + (1.0f / dt));
+
+        spriteFlipTimeLeft -= dt;
+        if (spriteFlipTimeLeft <= 0) {
+            spriteFlipTimeLeft = spriteFlipTime;
+            spriteIndex++;
+            if (spriteIndex > 4) {
+                spriteIndex = 0;
+            }
+            mario.getComponent(SpriteRenderer.class).setSprite(sprites.getSprite(spriteIndex));
+        }
 
         for(GameObject go : this.gameObjects) {
             go.update(dt);
