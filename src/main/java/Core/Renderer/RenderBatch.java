@@ -3,6 +3,7 @@ package Core.Renderer;
 import Core.Components.SpriteRenderer;
 import Core.Window;
 import Utils.AssetPool;
+import org.joml.Vector2f;
 import org.joml.Vector4f;
 
 import java.util.ArrayList;
@@ -32,6 +33,7 @@ public class RenderBatch {
     private int numSprites;
     private boolean hasRoom;
     private float[] vertices;
+    private int[] texSlots = {0, 1, 2, 3, 4, 5, 6, 7};
 
     private List<Texture> textures;
     private int vaoID, vboID;
@@ -111,6 +113,13 @@ public class RenderBatch {
         shader.uploadMat4f("uProjection", Window.getScene().camera().getProjectionMatrix());
         shader.uploadMat4f("uView", Window.getScene().camera().getViewMatrix());
 
+        for(int i = 0; i < textures.size(); i++){
+            glActiveTexture(GL_TEXTURE0 + i + 1);
+            textures.get(i).bind();
+        }
+
+        shader.uploadIntArray("uTextures", texSlots);
+
         glBindVertexArray(vaoID);
         glEnableVertexAttribArray(0);
         glEnableVertexAttribArray(1);
@@ -121,6 +130,10 @@ public class RenderBatch {
         glDisableVertexAttribArray(1);
         glBindVertexArray(0);
 
+        for(int i = 0; i < textures.size(); i++){
+            textures.get(i).unbind();
+        }
+
         shader.detach();
     }
 
@@ -130,12 +143,13 @@ public class RenderBatch {
         int offset = index * 4 * VERTEX_SIZE;
 
         Vector4f color = sprite.getColor();
+        Vector2f[] texCoords = sprite.getTexCoords();
 
         int texID = 0;
         if(sprite.getTexture() != null) {
             for (int i = 0; i < textures.size(); i++) {
                 if(textures.get(i) == sprite.getTexture()){
-                    texID = i;
+                    texID = i + 1;
                     break;
                 }
             }
@@ -165,7 +179,12 @@ public class RenderBatch {
             vertices[offset + 5] = color.w;
 
             //Load texture coordinates
+            vertices[offset + 6] = texCoords[i].x;
+            vertices[offset + 7] = texCoords[i].y;
 
+
+            //Load texture id
+            vertices[offset + 8] = texID;
 
             offset += VERTEX_SIZE;
         }
