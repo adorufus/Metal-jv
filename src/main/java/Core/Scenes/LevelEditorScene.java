@@ -8,6 +8,7 @@ import Core.Components.Spritesheet;
 import Core.Events.MouseControls;
 import Core.Events.MouseListener;
 import Utils.AssetPool;
+import Utils.Debug;
 import Utils.Deserializer;
 import Utils.GameObjectDeserializer;
 import com.google.gson.Gson;
@@ -18,6 +19,7 @@ import imgui.enums.ImGuiColorEditFlags;
 import imgui.enums.ImGuiComboFlags;
 import imgui.enums.ImGuiWindowFlags;
 import org.joml.Vector2f;
+import org.joml.Vector3f;
 import org.joml.Vector4f;
 
 import static Utils.Utilities.Print;
@@ -43,7 +45,7 @@ public class LevelEditorScene extends Scene {
         this.camera = new Camera(new Vector2f(-250, 0));
 
         envSprite = AssetPool.getSpritesheet("assets/images/sprites/level.png");
-
+        Debug.addLine2D(new Vector2f(0, 0), new Vector2f(800, 800), new Vector3f(1, 0, 0), 120);
         if(loadedLevel){
             this.activeGameObject = gameObjects.get(0);
             this.activeGameObject.addComponent(new Rigidbody());

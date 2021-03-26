@@ -5,6 +5,7 @@ import Core.Events.MouseListener;
 import Core.ImGUI.ImGuiLayer;
 import Core.Scenes.LevelEditorScene;
 import Core.Scenes.LevelScene;
+import Utils.Debug;
 import org.lwjgl.glfw.GLFWErrorCallback;
 import org.lwjgl.opengl.GL;
 import org.lwjgl.opengl.GLUtil;
@@ -149,10 +150,13 @@ public class Window {
             //polling events
             glfwPollEvents();
 
+            Debug.beginFrame();
+
             glClearColor(r, g, b, a);
             glClear(GL_COLOR_BUFFER_BIT);
 
             if(dt > 0) {
+                Debug.draw();
                 currentScene.update(dt);
             }
 

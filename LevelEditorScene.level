@@ -66,6 +66,36 @@
           },
           "uid": 44
         }
+      },
+      {
+        "type": "Core.Components.Rigidbody",
+        "properties": {
+          "colliderType": 0,
+          "myType": 0,
+          "friction": 0.8,
+          "useGravity": false,
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "uid": 47
+        }
+      },
+      {
+        "type": "Core.Components.Rigidbody",
+        "properties": {
+          "colliderType": 0,
+          "myType": 0,
+          "friction": 0.8,
+          "useGravity": false,
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "uid": 48
+        }
       }
     ],
     "zIndex": 2,
