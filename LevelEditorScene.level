@@ -1,0 +1,2591 @@
+[
+  {
+    "uid": 0,
+    "name": "Player",
+    "components": [
+      {
+        "type": "Core.Components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 0.0,
+            "height": 0.0,
+            "texCoords": [
+              {
+                "x": 1.0,
+                "y": 1.0
+              },
+              {
+                "x": 1.0,
+                "y": 0.0
+              },
+              {
+                "x": 0.0,
+                "y": 0.0
+              },
+              {
+                "x": 0.0,
+                "y": 1.0
+              }
+            ]
+          },
+          "uid": 0
+        }
+      },
+      {
+        "type": "Core.Components.Rigidbody",
+        "properties": {
+          "colliderType": 0,
+          "myType": 0,
+          "friction": 0.8,
+          "useGravity": false,
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "uid": 1
+        }
+      },
+      {
+        "type": "Core.Components.Rigidbody",
+        "properties": {
+          "colliderType": 0,
+          "myType": 0,
+          "friction": 0.8,
+          "useGravity": false,
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "uid": 44
+        }
+      }
+    ],
+    "zIndex": 2,
+    "transform": {
+      "position": {
+        "x": 100.0,
+        "y": 100.0
+      },
+      "scale": {
+        "x": 256.0,
+        "y": 256.0
+      }
+    }
+  },
+  {
+    "uid": 1,
+    "name": "Player 2",
+    "components": [
+      {
+        "type": "Core.Components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 0.0,
+            "height": 0.0,
+            "texture": {
+              "filePath": "assets/texture.jpg",
+              "textureID": 3,
+              "height": 1372,
+              "width": 640
+            },
+            "texCoords": [
+              {
+                "x": 1.0,
+                "y": 1.0
+              },
+              {
+                "x": 1.0,
+                "y": 0.0
+              },
+              {
+                "x": 0.0,
+                "y": 0.0
+              },
+              {
+                "x": 0.0,
+                "y": 1.0
+              }
+            ]
+          },
+          "uid": 2
+        }
+      }
+    ],
+    "zIndex": 3,
+    "transform": {
+      "position": {
+        "x": 400.0,
+        "y": 100.0
+      },
+      "scale": {
+        "x": 256.0,
+        "y": 256.0
+      }
+    }
+  },
+  {
+    "uid": 2,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "Core.Components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filePath": "assets/images/sprites/level.png",
+              "textureID": 2,
+              "height": 192,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.85714287,
+                "y": 1.0
+              },
+              {
+                "x": 0.85714287,
+                "y": 0.9166667
+              },
+              {
+                "x": 0.71428573,
+                "y": 0.9166667
+              },
+              {
+                "x": 0.71428573,
+                "y": 1.0
+              }
+            ]
+          },
+          "uid": 3
+        }
+      }
+    ],
+    "zIndex": 0,
+    "transform": {
+      "position": {
+        "x": -58.666656,
+        "y": 528.6937
+      },
+      "scale": {
+        "x": 64.0,
+        "y": 64.0
+      }
+    }
+  },
+  {
+    "uid": 3,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "Core.Components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filePath": "assets/images/sprites/level.png",
+              "textureID": 2,
+              "height": 192,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.5714286,
+                "y": 1.0
+              },
+              {
+                "x": 0.5714286,
+                "y": 0.9166667
+              },
+              {
+                "x": 0.42857143,
+                "y": 0.9166667
+              },
+              {
+                "x": 0.42857143,
+                "y": 1.0
+              }
+            ]
+          },
+          "uid": 4
+        }
+      }
+    ],
+    "zIndex": 0,
+    "transform": {
+      "position": {
+        "x": 135.33334,
+        "y": 505.25928
+      },
+      "scale": {
+        "x": 64.0,
+        "y": 64.0
+      }
+    }
+  },
+  {
+    "uid": 4,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "Core.Components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filePath": "assets/images/sprites/level.png",
+              "textureID": 2,
+              "height": 192,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.42857143,
+                "y": 1.0
+              },
+              {
+                "x": 0.42857143,
+                "y": 0.9166667
+              },
+              {
+                "x": 0.2857143,
+                "y": 0.9166667
+              },
+              {
+                "x": 0.2857143,
+                "y": 1.0
+              }
+            ]
+          },
+          "uid": 5
+        }
+      }
+    ],
+    "zIndex": 0,
+    "transform": {
+      "position": {
+        "x": -195.33337,
+        "y": 397.58722
+      },
+      "scale": {
+        "x": 64.0,
+        "y": 64.0
+      }
+    }
+  },
+  {
+    "uid": 5,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "Core.Components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filePath": "assets/images/sprites/level.png",
+              "textureID": 2,
+              "height": 192,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.2857143,
+                "y": 1.0
+              },
+              {
+                "x": 0.2857143,
+                "y": 0.9166667
+              },
+              {
+                "x": 0.14285715,
+                "y": 0.9166667
+              },
+              {
+                "x": 0.14285715,
+                "y": 1.0
+              }
+            ]
+          },
+          "uid": 6
+        }
+      }
+    ],
+    "zIndex": 0,
+    "transform": {
+      "position": {
+        "x": -38.666656,
+        "y": 400.75403
+      },
+      "scale": {
+        "x": 64.0,
+        "y": 64.0
+      }
+    }
+  },
+  {
+    "uid": 6,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "Core.Components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filePath": "assets/images/sprites/level.png",
+              "textureID": 2,
+              "height": 192,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.2857143,
+                "y": 1.0
+              },
+              {
+                "x": 0.2857143,
+                "y": 0.9166667
+              },
+              {
+                "x": 0.14285715,
+                "y": 0.9166667
+              },
+              {
+                "x": 0.14285715,
+                "y": 1.0
+              }
+            ]
+          },
+          "uid": 7
+        }
+      }
+    ],
+    "zIndex": 0,
+    "transform": {
+      "position": {
+        "x": 414.0,
+        "y": 460.92368
+      },
+      "scale": {
+        "x": 64.0,
+        "y": 64.0
+      }
+    }
+  },
+  {
+    "uid": 7,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "Core.Components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filePath": "assets/images/sprites/level.png",
+              "textureID": 2,
+              "height": 192,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.14285715,
+                "y": 1.0
+              },
+              {
+                "x": 0.14285715,
+                "y": 0.9166667
+              },
+              {
+                "x": 0.0,
+                "y": 0.9166667
+              },
+              {
+                "x": 0.0,
+                "y": 1.0
+              }
+            ]
+          },
+          "uid": 8
+        }
+      }
+    ],
+    "zIndex": 0,
+    "transform": {
+      "position": {
+        "x": 310.6667,
+        "y": 556.56177
+      },
+      "scale": {
+        "x": 64.0,
+        "y": 64.0
+      }
+    }
+  },
+  {
+    "uid": 8,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "Core.Components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filePath": "assets/images/sprites/level.png",
+              "textureID": 2,
+              "height": 192,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.14285715,
+                "y": 0.6666667
+              },
+              {
+                "x": 0.14285715,
+                "y": 0.5833333
+              },
+              {
+                "x": 0.0,
+                "y": 0.5833333
+              },
+              {
+                "x": 0.0,
+                "y": 0.6666667
+              }
+            ]
+          },
+          "uid": 9
+        }
+      }
+    ],
+    "zIndex": 0,
+    "transform": {
+      "position": {
+        "x": 270.0,
+        "y": 376.6862
+      },
+      "scale": {
+        "x": 64.0,
+        "y": 64.0
+      }
+    }
+  },
+  {
+    "uid": 9,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "Core.Components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filePath": "assets/images/sprites/level.png",
+              "textureID": 2,
+              "height": 192,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.85714287,
+                "y": 0.5
+              },
+              {
+                "x": 0.85714287,
+                "y": 0.41666666
+              },
+              {
+                "x": 0.71428573,
+                "y": 0.41666666
+              },
+              {
+                "x": 0.71428573,
+                "y": 0.5
+              }
+            ]
+          },
+          "uid": 10
+        }
+      }
+    ],
+    "zIndex": 0,
+    "transform": {
+      "position": {
+        "x": 344.0,
+        "y": 63.170593
+      },
+      "scale": {
+        "x": 64.0,
+        "y": 64.0
+      }
+    }
+  },
+  {
+    "uid": 10,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "Core.Components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filePath": "assets/images/sprites/level.png",
+              "textureID": 2,
+              "height": 192,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.85714287,
+                "y": 0.5
+              },
+              {
+                "x": 0.85714287,
+                "y": 0.41666666
+              },
+              {
+                "x": 0.71428573,
+                "y": 0.41666666
+              },
+              {
+                "x": 0.71428573,
+                "y": 0.5
+              }
+            ]
+          },
+          "uid": 11
+        }
+      }
+    ],
+    "zIndex": 0,
+    "transform": {
+      "position": {
+        "x": 115.33334,
+        "y": 109.40625
+      },
+      "scale": {
+        "x": 64.0,
+        "y": 64.0
+      }
+    }
+  },
+  {
+    "uid": 11,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "Core.Components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filePath": "assets/images/sprites/level.png",
+              "textureID": 2,
+              "height": 192,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.71428573,
+                "y": 0.75
+              },
+              {
+                "x": 0.71428573,
+                "y": 0.6666667
+              },
+              {
+                "x": 0.5714286,
+                "y": 0.6666667
+              },
+              {
+                "x": 0.5714286,
+                "y": 0.75
+              }
+            ]
+          },
+          "uid": 12
+        }
+      }
+    ],
+    "zIndex": 0,
+    "transform": {
+      "position": {
+        "x": -11.333313,
+        "y": 341.21777
+      },
+      "scale": {
+        "x": 64.0,
+        "y": 64.0
+      }
+    }
+  },
+  {
+    "uid": 12,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "Core.Components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filePath": "assets/images/sprites/level.png",
+              "textureID": 2,
+              "height": 192,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.85714287,
+                "y": 1.0
+              },
+              {
+                "x": 0.85714287,
+                "y": 0.9166667
+              },
+              {
+                "x": 0.71428573,
+                "y": 0.9166667
+              },
+              {
+                "x": 0.71428573,
+                "y": 1.0
+              }
+            ]
+          },
+          "uid": 13
+        }
+      }
+    ],
+    "zIndex": 0,
+    "transform": {
+      "position": {
+        "x": -24.666687,
+        "y": 123.97362
+      },
+      "scale": {
+        "x": 64.0,
+        "y": 64.0
+      }
+    }
+  },
+  {
+    "uid": 13,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "Core.Components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filePath": "assets/images/sprites/level.png",
+              "textureID": 2,
+              "height": 192,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.2857143,
+                "y": 0.75
+              },
+              {
+                "x": 0.2857143,
+                "y": 0.6666667
+              },
+              {
+                "x": 0.14285715,
+                "y": 0.6666667
+              },
+              {
+                "x": 0.14285715,
+                "y": 0.75
+              }
+            ]
+          },
+          "uid": 14
+        }
+      }
+    ],
+    "zIndex": 0,
+    "transform": {
+      "position": {
+        "x": -21.333313,
+        "y": 167.04243
+      },
+      "scale": {
+        "x": 64.0,
+        "y": 64.0
+      }
+    }
+  },
+  {
+    "uid": 14,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "Core.Components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filePath": "assets/images/sprites/level.png",
+              "textureID": 2,
+              "height": 192,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.71428573,
+                "y": 1.0
+              },
+              {
+                "x": 0.71428573,
+                "y": 0.9166667
+              },
+              {
+                "x": 0.5714286,
+                "y": 0.9166667
+              },
+              {
+                "x": 0.5714286,
+                "y": 1.0
+              }
+            ]
+          },
+          "uid": 15
+        }
+      }
+    ],
+    "zIndex": 0,
+    "transform": {
+      "position": {
+        "x": -74.66669,
+        "y": 127.14046
+      },
+      "scale": {
+        "x": 64.0,
+        "y": 64.0
+      }
+    }
+  },
+  {
+    "uid": 15,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "Core.Components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filePath": "assets/images/sprites/level.png",
+              "textureID": 2,
+              "height": 192,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.14285715,
+                "y": 0.75
+              },
+              {
+                "x": 0.14285715,
+                "y": 0.6666667
+              },
+              {
+                "x": 0.0,
+                "y": 0.6666667
+              },
+              {
+                "x": 0.0,
+                "y": 0.75
+              }
+            ]
+          },
+          "uid": 16
+        }
+      }
+    ],
+    "zIndex": 0,
+    "transform": {
+      "position": {
+        "x": -74.66669,
+        "y": 127.14046
+      },
+      "scale": {
+        "x": 64.0,
+        "y": 64.0
+      }
+    }
+  },
+  {
+    "uid": 16,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "Core.Components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filePath": "assets/images/sprites/level.png",
+              "textureID": 2,
+              "height": 192,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.14285715,
+                "y": 0.75
+              },
+              {
+                "x": 0.14285715,
+                "y": 0.6666667
+              },
+              {
+                "x": 0.0,
+                "y": 0.6666667
+              },
+              {
+                "x": 0.0,
+                "y": 0.75
+              }
+            ]
+          },
+          "uid": 17
+        }
+      }
+    ],
+    "zIndex": 0,
+    "transform": {
+      "position": {
+        "x": -74.66669,
+        "y": 127.14046
+      },
+      "scale": {
+        "x": 64.0,
+        "y": 64.0
+      }
+    }
+  },
+  {
+    "uid": 17,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "Core.Components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filePath": "assets/images/sprites/level.png",
+              "textureID": 2,
+              "height": 192,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.14285715,
+                "y": 0.75
+              },
+              {
+                "x": 0.14285715,
+                "y": 0.6666667
+              },
+              {
+                "x": 0.0,
+                "y": 0.6666667
+              },
+              {
+                "x": 0.0,
+                "y": 0.75
+              }
+            ]
+          },
+          "uid": 18
+        }
+      }
+    ],
+    "zIndex": 0,
+    "transform": {
+      "position": {
+        "x": -14.0,
+        "y": 313.3497
+      },
+      "scale": {
+        "x": 64.0,
+        "y": 64.0
+      }
+    }
+  },
+  {
+    "uid": 18,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "Core.Components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filePath": "assets/images/sprites/level.png",
+              "textureID": 2,
+              "height": 192,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.2857143,
+                "y": 0.5833333
+              },
+              {
+                "x": 0.2857143,
+                "y": 0.5
+              },
+              {
+                "x": 0.14285715,
+                "y": 0.5
+              },
+              {
+                "x": 0.14285715,
+                "y": 0.5833333
+              }
+            ]
+          },
+          "uid": 19
+        }
+      }
+    ],
+    "zIndex": 0,
+    "transform": {
+      "position": {
+        "x": 216.66666,
+        "y": 201.8775
+      },
+      "scale": {
+        "x": 64.0,
+        "y": 64.0
+      }
+    }
+  },
+  {
+    "uid": 19,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "Core.Components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filePath": "assets/images/sprites/level.png",
+              "textureID": 2,
+              "height": 192,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.2857143,
+                "y": 0.5833333
+              },
+              {
+                "x": 0.2857143,
+                "y": 0.5
+              },
+              {
+                "x": 0.14285715,
+                "y": 0.5
+              },
+              {
+                "x": 0.14285715,
+                "y": 0.5833333
+              }
+            ]
+          },
+          "uid": 20
+        }
+      }
+    ],
+    "zIndex": 0,
+    "transform": {
+      "position": {
+        "x": 216.66666,
+        "y": 201.8775
+      },
+      "scale": {
+        "x": 64.0,
+        "y": 64.0
+      }
+    }
+  },
+  {
+    "uid": 20,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "Core.Components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filePath": "assets/images/sprites/level.png",
+              "textureID": 2,
+              "height": 192,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.2857143,
+                "y": 0.5833333
+              },
+              {
+                "x": 0.2857143,
+                "y": 0.5
+              },
+              {
+                "x": 0.14285715,
+                "y": 0.5
+              },
+              {
+                "x": 0.14285715,
+                "y": 0.5833333
+              }
+            ]
+          },
+          "uid": 21
+        }
+      }
+    ],
+    "zIndex": 0,
+    "transform": {
+      "position": {
+        "x": 216.66666,
+        "y": 201.8775
+      },
+      "scale": {
+        "x": 64.0,
+        "y": 64.0
+      }
+    }
+  },
+  {
+    "uid": 21,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "Core.Components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filePath": "assets/images/sprites/level.png",
+              "textureID": 2,
+              "height": 192,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.2857143,
+                "y": 0.5833333
+              },
+              {
+                "x": 0.2857143,
+                "y": 0.5
+              },
+              {
+                "x": 0.14285715,
+                "y": 0.5
+              },
+              {
+                "x": 0.14285715,
+                "y": 0.5833333
+              }
+            ]
+          },
+          "uid": 22
+        }
+      }
+    ],
+    "zIndex": 0,
+    "transform": {
+      "position": {
+        "x": 216.66666,
+        "y": 201.8775
+      },
+      "scale": {
+        "x": 64.0,
+        "y": 64.0
+      }
+    }
+  },
+  {
+    "uid": 22,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "Core.Components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filePath": "assets/images/sprites/level.png",
+              "textureID": 2,
+              "height": 192,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.2857143,
+                "y": 0.5833333
+              },
+              {
+                "x": 0.2857143,
+                "y": 0.5
+              },
+              {
+                "x": 0.14285715,
+                "y": 0.5
+              },
+              {
+                "x": 0.14285715,
+                "y": 0.5833333
+              }
+            ]
+          },
+          "uid": 23
+        }
+      }
+    ],
+    "zIndex": 0,
+    "transform": {
+      "position": {
+        "x": 216.66666,
+        "y": 201.8775
+      },
+      "scale": {
+        "x": 64.0,
+        "y": 64.0
+      }
+    }
+  },
+  {
+    "uid": 23,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "Core.Components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filePath": "assets/images/sprites/level.png",
+              "textureID": 2,
+              "height": 192,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.2857143,
+                "y": 0.5833333
+              },
+              {
+                "x": 0.2857143,
+                "y": 0.5
+              },
+              {
+                "x": 0.14285715,
+                "y": 0.5
+              },
+              {
+                "x": 0.14285715,
+                "y": 0.5833333
+              }
+            ]
+          },
+          "uid": 24
+        }
+      }
+    ],
+    "zIndex": 0,
+    "transform": {
+      "position": {
+        "x": 216.66666,
+        "y": 201.8775
+      },
+      "scale": {
+        "x": 64.0,
+        "y": 64.0
+      }
+    }
+  },
+  {
+    "uid": 24,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "Core.Components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filePath": "assets/images/sprites/level.png",
+              "textureID": 2,
+              "height": 192,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.2857143,
+                "y": 0.5833333
+              },
+              {
+                "x": 0.2857143,
+                "y": 0.5
+              },
+              {
+                "x": 0.14285715,
+                "y": 0.5
+              },
+              {
+                "x": 0.14285715,
+                "y": 0.5833333
+              }
+            ]
+          },
+          "uid": 25
+        }
+      }
+    ],
+    "zIndex": 0,
+    "transform": {
+      "position": {
+        "x": 216.66666,
+        "y": 201.8775
+      },
+      "scale": {
+        "x": 64.0,
+        "y": 64.0
+      }
+    }
+  },
+  {
+    "uid": 25,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "Core.Components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filePath": "assets/images/sprites/level.png",
+              "textureID": 2,
+              "height": 192,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.2857143,
+                "y": 0.5833333
+              },
+              {
+                "x": 0.2857143,
+                "y": 0.5
+              },
+              {
+                "x": 0.14285715,
+                "y": 0.5
+              },
+              {
+                "x": 0.14285715,
+                "y": 0.5833333
+              }
+            ]
+          },
+          "uid": 26
+        }
+      }
+    ],
+    "zIndex": 0,
+    "transform": {
+      "position": {
+        "x": 216.66666,
+        "y": 201.8775
+      },
+      "scale": {
+        "x": 64.0,
+        "y": 64.0
+      }
+    }
+  },
+  {
+    "uid": 26,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "Core.Components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filePath": "assets/images/sprites/level.png",
+              "textureID": 2,
+              "height": 192,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.2857143,
+                "y": 0.5833333
+              },
+              {
+                "x": 0.2857143,
+                "y": 0.5
+              },
+              {
+                "x": 0.14285715,
+                "y": 0.5
+              },
+              {
+                "x": 0.14285715,
+                "y": 0.5833333
+              }
+            ]
+          },
+          "uid": 27
+        }
+      }
+    ],
+    "zIndex": 0,
+    "transform": {
+      "position": {
+        "x": 212.0,
+        "y": 284.84827
+      },
+      "scale": {
+        "x": 64.0,
+        "y": 64.0
+      }
+    }
+  },
+  {
+    "uid": 27,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "Core.Components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filePath": "assets/images/sprites/level.png",
+              "textureID": 2,
+              "height": 192,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.14285715,
+                "y": 1.0
+              },
+              {
+                "x": 0.14285715,
+                "y": 0.9166667
+              },
+              {
+                "x": 0.0,
+                "y": 0.9166667
+              },
+              {
+                "x": 0.0,
+                "y": 1.0
+              }
+            ]
+          },
+          "uid": 28
+        }
+      }
+    ],
+    "zIndex": 0,
+    "transform": {
+      "position": {
+        "x": -40.666687,
+        "y": 294.98212
+      },
+      "scale": {
+        "x": 64.0,
+        "y": 64.0
+      }
+    }
+  },
+  {
+    "uid": 28,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "Core.Components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filePath": "assets/images/sprites/level.png",
+              "textureID": 2,
+              "height": 192,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.42857143,
+                "y": 0.9166667
+              },
+              {
+                "x": 0.42857143,
+                "y": 0.8333333
+              },
+              {
+                "x": 0.2857143,
+                "y": 0.8333333
+              },
+              {
+                "x": 0.2857143,
+                "y": 0.9166667
+              }
+            ]
+          },
+          "uid": 29
+        }
+      }
+    ],
+    "zIndex": 0,
+    "transform": {
+      "position": {
+        "x": 153.33334,
+        "y": 419.755
+      },
+      "scale": {
+        "x": 64.0,
+        "y": 64.0
+      }
+    }
+  },
+  {
+    "uid": 29,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "Core.Components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filePath": "assets/images/sprites/level.png",
+              "textureID": 2,
+              "height": 192,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.85714287,
+                "y": 0.5
+              },
+              {
+                "x": 0.85714287,
+                "y": 0.41666666
+              },
+              {
+                "x": 0.71428573,
+                "y": 0.41666666
+              },
+              {
+                "x": 0.71428573,
+                "y": 0.5
+              }
+            ]
+          },
+          "uid": 30
+        }
+      }
+    ],
+    "zIndex": 0,
+    "transform": {
+      "position": {
+        "x": 596.6667,
+        "y": 464.72388
+      },
+      "scale": {
+        "x": 64.0,
+        "y": 64.0
+      }
+    }
+  },
+  {
+    "uid": 30,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "Core.Components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filePath": "assets/images/sprites/level.png",
+              "textureID": 2,
+              "height": 192,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.71428573,
+                "y": 0.9166667
+              },
+              {
+                "x": 0.71428573,
+                "y": 0.8333333
+              },
+              {
+                "x": 0.5714286,
+                "y": 0.8333333
+              },
+              {
+                "x": 0.5714286,
+                "y": 0.9166667
+              }
+            ]
+          },
+          "uid": 31
+        }
+      }
+    ],
+    "zIndex": 0,
+    "transform": {
+      "position": {
+        "x": 328.0,
+        "y": 455.85675
+      },
+      "scale": {
+        "x": 64.0,
+        "y": 64.0
+      }
+    }
+  },
+  {
+    "uid": 31,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "Core.Components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filePath": "assets/images/sprites/level.png",
+              "textureID": 2,
+              "height": 192,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.85714287,
+                "y": 0.75
+              },
+              {
+                "x": 0.85714287,
+                "y": 0.6666667
+              },
+              {
+                "x": 0.71428573,
+                "y": 0.6666667
+              },
+              {
+                "x": 0.71428573,
+                "y": 0.75
+              }
+            ]
+          },
+          "uid": 32
+        }
+      }
+    ],
+    "zIndex": 0,
+    "transform": {
+      "position": {
+        "x": 228.66669,
+        "y": 548.328
+      },
+      "scale": {
+        "x": 64.0,
+        "y": 64.0
+      }
+    }
+  },
+  {
+    "uid": 32,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "Core.Components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filePath": "assets/images/sprites/level.png",
+              "textureID": 2,
+              "height": 192,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 1.0,
+                "y": 0.5833333
+              },
+              {
+                "x": 1.0,
+                "y": 0.5
+              },
+              {
+                "x": 0.85714287,
+                "y": 0.5
+              },
+              {
+                "x": 0.85714287,
+                "y": 0.5833333
+              }
+            ]
+          },
+          "uid": 33
+        }
+      }
+    ],
+    "zIndex": 0,
+    "transform": {
+      "position": {
+        "x": 70.66669,
+        "y": 407.72104
+      },
+      "scale": {
+        "x": 64.0,
+        "y": 64.0
+      }
+    }
+  },
+  {
+    "uid": 33,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "Core.Components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filePath": "assets/images/sprites/level.png",
+              "textureID": 2,
+              "height": 192,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.85714287,
+                "y": 0.5833333
+              },
+              {
+                "x": 0.85714287,
+                "y": 0.5
+              },
+              {
+                "x": 0.71428573,
+                "y": 0.5
+              },
+              {
+                "x": 0.71428573,
+                "y": 0.5833333
+              }
+            ]
+          },
+          "uid": 34
+        }
+      }
+    ],
+    "zIndex": 0,
+    "transform": {
+      "position": {
+        "x": 168.0,
+        "y": 355.78513
+      },
+      "scale": {
+        "x": 64.0,
+        "y": 64.0
+      }
+    }
+  },
+  {
+    "uid": 34,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "Core.Components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filePath": "assets/images/sprites/level.png",
+              "textureID": 2,
+              "height": 192,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.85714287,
+                "y": 0.5833333
+              },
+              {
+                "x": 0.85714287,
+                "y": 0.5
+              },
+              {
+                "x": 0.71428573,
+                "y": 0.5
+              },
+              {
+                "x": 0.71428573,
+                "y": 0.5833333
+              }
+            ]
+          },
+          "uid": 35
+        }
+      }
+    ],
+    "zIndex": 0,
+    "transform": {
+      "position": {
+        "x": -116.66666,
+        "y": 434.32236
+      },
+      "scale": {
+        "x": 64.0,
+        "y": 64.0
+      }
+    }
+  },
+  {
+    "uid": 35,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "Core.Components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filePath": "assets/images/sprites/level.png",
+              "textureID": 2,
+              "height": 192,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.71428573,
+                "y": 0.5833333
+              },
+              {
+                "x": 0.71428573,
+                "y": 0.5
+              },
+              {
+                "x": 0.5714286,
+                "y": 0.5
+              },
+              {
+                "x": 0.5714286,
+                "y": 0.5833333
+              }
+            ]
+          },
+          "uid": 36
+        }
+      }
+    ],
+    "zIndex": 0,
+    "transform": {
+      "position": {
+        "x": -150.66669,
+        "y": 543.89453
+      },
+      "scale": {
+        "x": 64.0,
+        "y": 64.0
+      }
+    }
+  },
+  {
+    "uid": 36,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "Core.Components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filePath": "assets/images/sprites/level.png",
+              "textureID": 2,
+              "height": 192,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.5714286,
+                "y": 0.5833333
+              },
+              {
+                "x": 0.5714286,
+                "y": 0.5
+              },
+              {
+                "x": 0.42857143,
+                "y": 0.5
+              },
+              {
+                "x": 0.42857143,
+                "y": 0.5833333
+              }
+            ]
+          },
+          "uid": 37
+        }
+      }
+    ],
+    "zIndex": 0,
+    "transform": {
+      "position": {
+        "x": 26.666656,
+        "y": 529.3271
+      },
+      "scale": {
+        "x": 64.0,
+        "y": 64.0
+      }
+    }
+  },
+  {
+    "uid": 37,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "Core.Components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filePath": "assets/images/sprites/level.png",
+              "textureID": 2,
+              "height": 192,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.42857143,
+                "y": 0.5833333
+              },
+              {
+                "x": 0.42857143,
+                "y": 0.5
+              },
+              {
+                "x": 0.2857143,
+                "y": 0.5
+              },
+              {
+                "x": 0.2857143,
+                "y": 0.5833333
+              }
+            ]
+          },
+          "uid": 38
+        }
+      }
+    ],
+    "zIndex": 0,
+    "transform": {
+      "position": {
+        "x": 466.6667,
+        "y": 388.08673
+      },
+      "scale": {
+        "x": 64.0,
+        "y": 64.0
+      }
+    }
+  },
+  {
+    "uid": 38,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "Core.Components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filePath": "assets/images/sprites/level.png",
+              "textureID": 2,
+              "height": 192,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.42857143,
+                "y": 0.33333334
+              },
+              {
+                "x": 0.42857143,
+                "y": 0.25
+              },
+              {
+                "x": 0.2857143,
+                "y": 0.25
+              },
+              {
+                "x": 0.2857143,
+                "y": 0.33333334
+              }
+            ]
+          },
+          "uid": 39
+        }
+      }
+    ],
+    "zIndex": 0,
+    "transform": {
+      "position": {
+        "x": 450.66663,
+        "y": 505.25928
+      },
+      "scale": {
+        "x": 64.0,
+        "y": 64.0
+      }
+    }
+  },
+  {
+    "uid": 39,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "Core.Components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filePath": "assets/images/sprites/level.png",
+              "textureID": 2,
+              "height": 192,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.85714287,
+                "y": 0.25
+              },
+              {
+                "x": 0.85714287,
+                "y": 0.16666667
+              },
+              {
+                "x": 0.71428573,
+                "y": 0.16666667
+              },
+              {
+                "x": 0.71428573,
+                "y": 0.25
+              }
+            ]
+          },
+          "uid": 40
+        }
+      }
+    ],
+    "zIndex": 0,
+    "transform": {
+      "position": {
+        "x": 594.6666,
+        "y": 568.5957
+      },
+      "scale": {
+        "x": 64.0,
+        "y": 64.0
+      }
+    }
+  },
+  {
+    "uid": 40,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "Core.Components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filePath": "assets/images/sprites/level.png",
+              "textureID": 2,
+              "height": 192,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.42857143,
+                "y": 0.9166667
+              },
+              {
+                "x": 0.42857143,
+                "y": 0.8333333
+              },
+              {
+                "x": 0.2857143,
+                "y": 0.8333333
+              },
+              {
+                "x": 0.2857143,
+                "y": 0.9166667
+              }
+            ]
+          },
+          "uid": 41
+        }
+      }
+    ],
+    "zIndex": 0,
+    "transform": {
+      "position": {
+        "x": 466.6667,
+        "y": 363.3855
+      },
+      "scale": {
+        "x": 64.0,
+        "y": 64.0
+      }
+    }
+  },
+  {
+    "uid": 41,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "Core.Components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filePath": "assets/images/sprites/level.png",
+              "textureID": 2,
+              "height": 192,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.42857143,
+                "y": 0.9166667
+              },
+              {
+                "x": 0.42857143,
+                "y": 0.8333333
+              },
+              {
+                "x": 0.2857143,
+                "y": 0.8333333
+              },
+              {
+                "x": 0.2857143,
+                "y": 0.9166667
+              }
+            ]
+          },
+          "uid": 42
+        }
+      }
+    ],
+    "zIndex": 0,
+    "transform": {
+      "position": {
+        "x": 402.6667,
+        "y": 363.3855
+      },
+      "scale": {
+        "x": 64.0,
+        "y": 64.0
+      }
+    }
+  },
+  {
+    "uid": 42,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "Core.Components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filePath": "assets/images/sprites/level.png",
+              "textureID": 2,
+              "height": 192,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.42857143,
+                "y": 0.9166667
+              },
+              {
+                "x": 0.42857143,
+                "y": 0.8333333
+              },
+              {
+                "x": 0.2857143,
+                "y": 0.8333333
+              },
+              {
+                "x": 0.2857143,
+                "y": 0.9166667
+              }
+            ]
+          },
+          "uid": 43
+        }
+      }
+    ],
+    "zIndex": 0,
+    "transform": {
+      "position": {
+        "x": 339.3333,
+        "y": 363.3855
+      },
+      "scale": {
+        "x": 64.0,
+        "y": 64.0
+      }
+    }
+  },
+  {
+    "uid": 43,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "Core.Components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filePath": "assets/images/sprites/level.png",
+              "textureID": 2,
+              "height": 192,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.2857143,
+                "y": 0.9166667
+              },
+              {
+                "x": 0.2857143,
+                "y": 0.8333333
+              },
+              {
+                "x": 0.14285715,
+                "y": 0.8333333
+              },
+              {
+                "x": 0.14285715,
+                "y": 0.9166667
+              }
+            ]
+          },
+          "uid": 45
+        }
+      }
+    ],
+    "zIndex": 0,
+    "transform": {
+      "position": {
+        "x": -153.33331,
+        "y": 336.15082
+      },
+      "scale": {
+        "x": 64.0,
+        "y": 64.0
+      }
+    }
+  },
+  {
+    "uid": 44,
+    "name": "Sprite_Object_Gen",
+    "components": [
+      {
+        "type": "Core.Components.SpriteRenderer",
+        "properties": {
+          "color": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0,
+            "w": 1.0
+          },
+          "sprite": {
+            "width": 16.0,
+            "height": 16.0,
+            "texture": {
+              "filePath": "assets/images/sprites/level.png",
+              "textureID": 2,
+              "height": 192,
+              "width": 112
+            },
+            "texCoords": [
+              {
+                "x": 0.5714286,
+                "y": 1.0
+              },
+              {
+                "x": 0.5714286,
+                "y": 0.9166667
+              },
+              {
+                "x": 0.42857143,
+                "y": 0.9166667
+              },
+              {
+                "x": 0.42857143,
+                "y": 1.0
+              }
+            ]
+          },
+          "uid": 46
+        }
+      }
+    ],
+    "zIndex": 0,
+    "transform": {
+      "position": {
+        "x": 30.666626,
+        "y": 260.7804
+      },
+      "scale": {
+        "x": 64.0,
+        "y": 64.0
+      }
+    }
+  }
+]

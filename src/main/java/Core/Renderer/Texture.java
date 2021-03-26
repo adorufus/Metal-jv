@@ -77,4 +77,8 @@ public class Texture {
     public int getWidth() {
         return this.width;
     }
+
+    public int getTexID() {
+        return textureID;
+    }
 }

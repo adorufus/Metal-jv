@@ -42,11 +42,13 @@ public class Window {
         switch (newScene){
             case 0:
                 currentScene = new LevelEditorScene();
+                currentScene.load();
                 currentScene.init();
                 currentScene.start();
                 break;
             case 1:
                 currentScene = new LevelScene();
+                currentScene.load();
                 currentScene.init();
                 currentScene.start();
                 break;
@@ -93,7 +95,7 @@ public class Window {
         glfwDefaultWindowHints();
         glfwWindowHint(GLFW_VISIBLE, GLFW_FALSE);
         glfwWindowHint(GLFW_RESIZABLE, GLFW_TRUE);
-        glfwWindowHint(GLFW_MAXIMIZED, GLFW_TRUE);
+        glfwWindowHint(GLFW_MAXIMIZED, GLFW_FALSE);
         glfwWindowHint(GLFW_OPENGL_DEBUG_CONTEXT, GLFW_TRUE);
 
         glfwWindow = glfwCreateWindow(this.width, this.height, this.title, NULL, NULL);
@@ -131,7 +133,7 @@ public class Window {
         this.imguiLayer = new ImGuiLayer(glfwWindow);
         this.imguiLayer.initImGui();
 
-        GLUtil.setupDebugMessageCallback();
+//        GLUtil.setupDebugMessageCallback();
 
         Window.changeScene(0);
 
@@ -161,6 +163,8 @@ public class Window {
             dt = endTime - beginTime;
             beginTime = endTime;
         }
+
+        currentScene.saveExit();
     }
 
     public static int getWidth() {

@@ -16,7 +16,7 @@ public class SpriteRenderer extends Component {
     private Sprite sprite = new Sprite();
     
     private transient Transform lastTransform;
-    private transient boolean isDirty = false;
+    private transient boolean isDirty = true;
 
 //    public SpriteRenderer(Vector4f color){
 //        this.color = color;
@@ -45,7 +45,7 @@ public class SpriteRenderer extends Component {
 
     @Override
     public void imgui() {
-        float[] refColorV = {1.0f, 1.0f, 1.0f, 1.0f};
+        float[] refColorV = {color.x, color.y, color.z, color.w};
         if(ImGui.colorPicker4("Color Picker", refColorV)){
             this.color.set(refColorV[0], refColorV[1], refColorV[2], refColorV[3]);
             this.isDirty = true;

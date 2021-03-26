@@ -1,45 +1,55 @@
-Core/Renderer/Texture.java
- Core.Renderer.Texture
-Core/Events/MouseListener.java
- Core.Events.MouseListener
 Core/Components/Sprite.java
  Core.Components.Sprite
-Utils/AssetPool.java
- Utils.AssetPool
-Core/Components/Spritesheet.java
- Core.Components.Spritesheet
-Core/GameObject.java
- Core.GameObject
+Core/Renderer/Texture.java
+ Core.Renderer.Texture
 Core/Transform.java
  Core.Transform
-Utils/Utilities.java
- Utils.Utilities
-Core/Renderer/Shader.java
- Core.Renderer.Shader
-Core/Camera.java
- Core.Camera
-Core/Component.java
- Core.Component
-Main.java
- Main
 Core/Events/KeyListener.java
  Core.Events.KeyListener
+Core/Renderer/Shader.java
+ Core.Renderer.Shader
+Core/Components/Spritesheet.java
+ Core.Components.Spritesheet
+Utils/Deserializer.java
+ Utils.Deserializer
+Core/Camera.java
+ Core.Camera
+Main.java
+ Main
+Utils/AssetPool.java
+ Utils.AssetPool
+Core/Components/FontRenderer.java
+ Core.Components.FontRenderer
+Core/Prefabs.java
+ Core.Prefabs
+Utils/GameObjectDeserializer.java
+ Utils.GameObjectDeserializer
+Core/Components/SpriteRenderer.java
+ Core.Components.SpriteRenderer
+Core/GameObject.java
+ Core.GameObject
+Utils/Utilities.java
+ Utils.Utilities
+Core/Renderer/Renderer.java
+ Core.Renderer.Renderer
+Core/Component.java
+ Core.Component
+Core/Components/Rigidbody.java
+ Core.Components.Rigidbody
+Core/Events/MouseListener.java
+ Core.Events.MouseListener
+Core/Renderer/RenderBatch.java
+ Core.Renderer.RenderBatch
+Core/Scene.java
+ Core.Scene
 Core/ImGUI/ImGuiLayer.java
  Core.ImGUI.ImGuiLayer
  Core.ImGUI.ImGuiLayer$1
  Core.ImGUI.ImGuiLayer$2
 Core/Scenes/LevelScene.java
  Core.Scenes.LevelScene
-Core/Components/SpriteRenderer.java
- Core.Components.SpriteRenderer
-Core/Scene.java
- Core.Scene
-Core/Components/FontRenderer.java
- Core.Components.FontRenderer
-Core/Renderer/Renderer.java
- Core.Renderer.Renderer
-Core/Renderer/RenderBatch.java
- Core.Renderer.RenderBatch
+Core/Events/MouseControls.java
+ Core.Events.MouseControls
 Core/Window.java
  Core.Window
 Core/Scenes/LevelEditorScene.java
