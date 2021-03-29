@@ -7,7 +7,6 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
 import imgui.ImGui;
-import imgui.enums.ImGuiWindowFlags;
 
 import java.io.FileWriter;
 import java.io.IOException;

@@ -1,10 +1,7 @@
 package Core.Scenes;
 
 import Core.*;
-import Core.Components.Rigidbody;
-import Core.Components.Sprite;
-import Core.Components.SpriteRenderer;
-import Core.Components.Spritesheet;
+import Core.Components.*;
 import Core.Events.MouseControls;
 import Core.Events.MouseListener;
 import Utils.AssetPool;
@@ -15,9 +12,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import imgui.ImGui;
 import imgui.ImVec2;
-import imgui.enums.ImGuiColorEditFlags;
-import imgui.enums.ImGuiComboFlags;
-import imgui.enums.ImGuiWindowFlags;
+import imgui.flag.ImGuiWindowFlags;
 import org.joml.Vector2f;
 import org.joml.Vector3f;
 import org.joml.Vector4f;
@@ -32,7 +27,7 @@ public class LevelEditorScene extends Scene {
     private float currentFps = 0;
     SpriteRenderer marioSprite;
 
-    MouseControls mouseControls = new MouseControls();
+    GameObject levelEditorObject = new GameObject("LevelEditor", new Transform(new Vector2f()), 0);
 
     public LevelEditorScene(){
 
@@ -40,12 +35,14 @@ public class LevelEditorScene extends Scene {
 
     @Override
     public void init() {
+        levelEditorObject.addComponent(new MouseControls());
+        levelEditorObject.addComponent(new GridLines());
+
         loadResources();
 
         this.camera = new Camera(new Vector2f(-250, 0));
 
         envSprite = AssetPool.getSpritesheet("assets/images/sprites/level.png");
-        Debug.addLine2D(new Vector2f(0, 0), new Vector2f(800, 800), new Vector3f(1, 0, 0), 120);
         if(loadedLevel){
             this.activeGameObject = gameObjects.get(0);
             this.activeGameObject.addComponent(new Rigidbody());
@@ -53,22 +50,14 @@ public class LevelEditorScene extends Scene {
             return;
         }
 
-        mario = new GameObject("Player", new Transform(new Vector2f(100, 100), new Vector2f(256, 256)), 2);
-        marioSprite = new SpriteRenderer();
-        marioSprite.setColor(new Vector4f(1, 0, 0, 1));
-        mario.addComponent(marioSprite);
-        mario.addComponent(new Rigidbody());
-        this.addGameObjectToScene(mario);
-        this.activeGameObject = mario;
-        this.setActiveObjectName(mario.getName());
-
-        mario2 = new GameObject("Player 2", new Transform(new Vector2f(400, 100), new Vector2f(256, 256)), 3);
-        SpriteRenderer mario2SprRenderer = new SpriteRenderer();
-        Sprite mario2Sprite = new Sprite();
-        mario2Sprite.setTexture(AssetPool.getTexture("assets/texture.jpg"));
-        mario2SprRenderer.setSprite(mario2Sprite);
-        mario2.addComponent(mario2SprRenderer);
-        this.addGameObjectToScene(mario2);
+//        mario = new GameObject("Player", new Transform(new Vector2f(100, 100), new Vector2f(256, 256)), 2);
+//        marioSprite = new SpriteRenderer();
+//        marioSprite.setColor(new Vector4f(1, 0, 0, 1));
+//        mario.addComponent(marioSprite);
+//        mario.addComponent(new Rigidbody());
+//        this.addGameObjectToScene(mario);
+//        this.activeGameObject = mario;
+//        this.setActiveObjectName(mario.getName());
     }
 
     private void loadResources() {
@@ -84,7 +73,7 @@ public class LevelEditorScene extends Scene {
 
     @Override
     public void update(float dt) {
-        mouseControls.update(dt);
+        levelEditorObject.update(dt);
 
 //        Print("FPS: " + (1.0f / dt));
         currentFps = 1.0f / dt;
@@ -122,12 +111,12 @@ public class LevelEditorScene extends Scene {
 
             ImGui.pushID(i);
 
-            if(ImGui.imageButton(id, spriteWidth, spriteHeight, texCoords[0].x, texCoords[0].y, texCoords[2].x, texCoords[2].y)){
+            if(ImGui.imageButton(id, spriteWidth, spriteHeight, texCoords[2].x, texCoords[0].y, texCoords[0].x, texCoords[2].y)){
                 Print("Button " + i + "clicked");
-                GameObject object = Prefabs.generateSpriteObject(sprite, spriteWidth, spriteHeight);
+                GameObject object = Prefabs.generateSpriteObject(sprite, 32, 32);
 
                 //attach to the mouse cursor
-                mouseControls.pickupObject(object);
+                levelEditorObject.getComponent(MouseControls.class).pickupObject(object);
 
             }
 

@@ -5,10 +5,11 @@ import Core.Events.MouseListener;
 import Core.Scene;
 import Core.Window;
 import imgui.*;
-import imgui.callbacks.ImStrConsumer;
-import imgui.callbacks.ImStrSupplier;
-import imgui.enums.*;
+import imgui.callback.ImStrConsumer;
+import imgui.callback.ImStrSupplier;
+import imgui.flag.*;
 import imgui.gl3.ImGuiImplGl3;
+import imgui.type.ImBoolean;
 
 import static org.lwjgl.glfw.GLFW.*;
 
@@ -32,6 +33,7 @@ public class ImGuiLayer {
 
         io.setIniFilename("window-layout.ini");
         io.setConfigFlags(ImGuiConfigFlags.NavEnableKeyboard);
+        io.setConfigFlags(ImGuiConfigFlags.DockingEnable);
         io.setBackendFlags(ImGuiBackendFlags.HasMouseCursors);
         io.setBackendPlatformName("imgui_java_impl_glfw");
 
@@ -171,11 +173,29 @@ public class ImGuiLayer {
 
         // Any Dear ImGui code SHOULD go between ImGui.newFrame()/ImGui.render() methods
         ImGui.newFrame();
+        setupDockSpace();
         currentScene.sceneImgui();
 //        ImGui.showDemoWindow();
+        ImGui.end();
         ImGui.render();
 
         endFrame();
+    }
+
+    private void setupDockSpace() {
+        int windowFlags = ImGuiWindowFlags.MenuBar | ImGuiWindowFlags.NoDocking;
+
+        ImGui.setNextWindowPos(0.0f, 0.0f, ImGuiCond.Always);
+        ImGui.setNextWindowSize(Window.getWidth(), Window.getHeight());
+        ImGui.pushStyleVar(ImGuiStyleVar.WindowRounding, 0.0f);
+        ImGui.pushStyleVar(ImGuiStyleVar.WindowBorderSize, 0.0f);
+
+        windowFlags |= ImGuiWindowFlags.NoTitleBar | ImGuiWindowFlags.NoCollapse | ImGuiWindowFlags.NoResize | ImGuiWindowFlags.NoMove | ImGuiWindowFlags.NoBringToFrontOnFocus | ImGuiWindowFlags.NoNavFocus;
+
+        ImGui.begin("DockSpace", new ImBoolean(true), windowFlags);
+        ImGui.popStyleVar(2);
+
+        ImGui.dockSpace(ImGui.getID("DockSpace"));
     }
 
     private void startFrame(final float deltaTime) {

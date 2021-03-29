@@ -33,10 +33,10 @@ public class Window {
         this.width = 1920;
         this.height = 1080;
         this.title = "Metal-Jv";
-        this.r = 1;
-        this.g = 1;
-        this.b = 1;
-        this.a = 1;
+        this.r = .1f;
+        this.g = .1f;
+        this.b = .1f;
+        this.a = 1f;
     }
 
     public static void changeScene(int newScene){
