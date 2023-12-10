@@ -1,16 +1,35 @@
+import org.gradle.internal.os.OperatingSystem
+
 plugins {
-    id 'java'
+    id 'application'
 }
+apply plugin : "java"
 
 group 'org.metal-jv'
 version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.11
 
-project.ext.lwjglVersion = "3.2.3"
-project.ext.jomlVersion = "1.10.1"
-project.ext.lwjglNatives = "natives-windows"
-project.ext.imguiVersion = '1.77-0.17.1'
+project.ext.lwjglVersion = "3.3.3"
+project.ext.jomlVersion = "1.10.5"
+
+switch (OperatingSystem.current()) {
+    case OperatingSystem.WINDOWS:
+        def osArch = System.getProperty("os.arch")
+        project.ext.lwjglNatives = osArch.contains("64")
+                ? "natives-windows${osArch.startsWith("aarch64") ? "-arm64" : ""}"
+                : "natives-windows-x86"
+        break
+    case OperatingSystem.MAC_OS:
+        project.ext.lwjglNatives = "natives-macos-arm64"
+        break
+}
+
+project.ext.imguiVersion = "1.86.11"
+
+application {
+    mainClass = 'Main'
+}
 
 repositories {
     jcenter()
@@ -20,12 +39,21 @@ repositories {
 dependencies {
     implementation platform("org.lwjgl:lwjgl-bom:$lwjglVersion")
 
-    implementation "io.imgui.java:binding:$imguiVersion"
-    implementation "io.imgui.java:lwjgl3:$imguiVersion"
+//    implementation "io.imgui.java:binding:$imguiVersion"
+//    implementation "io.imgui.java:lwjgl3:$imguiVersion"
+    implementation "io.github.spair:imgui-java-binding:$imguiVersion"
+    implementation "io.github.spair:imgui-java-lwjgl3:$imguiVersion"
+
 
     // Include all available natives, but it's likely that you want something specific
-    runtimeOnly "io.imgui.java:natives-windows:$imguiVersion"
-    runtimeOnly "io.imgui.java:natives-windows-x86:$imguiVersion"
+    switch (OperatingSystem.current()) {
+        case OperatingSystem.WINDOWS:
+            implementation "io.github.spair:imgui-java-natives-windows-ft:$imguiVersion"
+            break
+        case OperatingSystem.MAC_OS:
+            implementation "io.github.spair:imgui-java-natives-macos-ft:$imguiVersion"
+            break
+    }
 
     implementation 'com.google.code.gson:gson:2.8.6'
     implementation "org.lwjgl:lwjgl"

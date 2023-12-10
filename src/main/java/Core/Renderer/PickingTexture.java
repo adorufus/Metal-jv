@@ -13,7 +13,7 @@ public class PickingTexture {
 
     public PickingTexture(int width, int height) {
         if(!init(width, height)) {
-            assert false : "Error initializing picking texture"
+            assert false : "Error initializing picking texture";
         }
     }
 
@@ -42,10 +42,10 @@ public class PickingTexture {
         glReadBuffer(GL_NONE);
         glDrawBuffer(GL_COLOR_ATTACHMENT0);
 
-        if(glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE) {
-            assert false : "ERROR: Framebuffer is not complete!";
-        }
+        assert glCheckFramebufferStatus(GL_FRAMEBUFFER) == GL_FRAMEBUFFER_COMPLETE : "ERROR: Framebuffer is not complete!";
 
+        glBindTexture(GL_TEXTURE_2D, 0);
         glBindFramebuffer(GL_FRAMEBUFFER, 0);
+        return true;
     }
 }

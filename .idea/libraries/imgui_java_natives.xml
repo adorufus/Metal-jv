@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="imgui-java-natives">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../m1imgui/imgui-binding/build/libsNative/imgui-java-natives.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
