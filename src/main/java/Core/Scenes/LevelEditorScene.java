@@ -44,9 +44,11 @@ public class LevelEditorScene extends Scene {
 
         envSprite = AssetPool.getSpritesheet("assets/images/sprites/level.png");
         if(loadedLevel){
-            this.activeGameObject = gameObjects.get(0);
-            this.activeGameObject.addComponent(new Rigidbody());
-            this.setActiveObjectName(gameObjects.get(0).getName());
+            if(!gameObjects.isEmpty()) {
+                this.activeGameObject = gameObjects.get(0);
+                this.activeGameObject.addComponent(new Rigidbody());
+                this.setActiveObjectName(gameObjects.get(0).getName());
+            }
             return;
         }
 
@@ -65,6 +67,15 @@ public class LevelEditorScene extends Scene {
         AssetPool.addSpriteSheet("assets/images/sprites/level.png", new Spritesheet(AssetPool.getTexture("assets/images/sprites/level.png"), 16, 16, 81, 0, 0));
 
         AssetPool.getTexture("assets/texture.jpg");
+
+        for(GameObject g: gameObjects) {
+            if(g.getComponent(SpriteRenderer.class) != null){
+                SpriteRenderer sprite = g.getComponent(SpriteRenderer.class);
+                if(sprite.getTexture() != null) {
+                    sprite.setTexture(AssetPool.getTexture(sprite.getTexture().getFilePath()));
+                }
+            }
+        }
     }
 
     private int spriteIndex = 0;
@@ -135,35 +146,35 @@ public class LevelEditorScene extends Scene {
 
         ImGui.end();
 
-        ImGui.begin("Level Editor", flags);
-
-        if(ImGui.beginMenuBar()){
-            if(ImGui.beginMenu("File")){
-                if(ImGui.menuItem("Save", "ctrl+s", false, true)){
-                    this.saveExit();
-                    Print("Level Saved Successfuly");
-                }
-
-                if(ImGui.menuItem("Load", "ctrl+o", false, true)){
-                    this.load();
-                    Print("Level Loaded");
-                }
-                ImGui.endMenu();
-            }
-            if(ImGui.beginMenu("Edit")) {
-                ImGui.endMenu();
-            }
-            if(ImGui.beginMenu("Components")) {
-                ImGui.endMenu();
-            }
-
-            if(ImGui.menuItem("FPS: " + (int) currentFps, "", false, false)){
-
-            }
-            ImGui.endMenuBar();
-        }
-        ImGui.text("Random text");
-        ImGui.end();
+//        ImGui.begin("Level Editor", flags);
+//
+//        if(ImGui.beginMenuBar()){
+//            if(ImGui.beginMenu("File")){
+//                if(ImGui.menuItem("Save", "ctrl+s", false, true)){
+//                    this.saveExit();
+//                    Print("Level Saved Successfuly");
+//                }
+//
+//                if(ImGui.menuItem("Load", "ctrl+o", false, true)){
+//                    this.load();
+//                    Print("Level Loaded");
+//                }
+//                ImGui.endMenu();
+//            }
+//            if(ImGui.beginMenu("Edit")) {
+//                ImGui.endMenu();
+//            }
+//            if(ImGui.beginMenu("Components")) {
+//                ImGui.endMenu();
+//            }
+//
+//            if(ImGui.menuItem("FPS: " + (int) currentFps, "", false, false)){
+//
+//            }
+//            ImGui.endMenuBar();
+//        }
+////        ImGui.text("Random text");
+//        ImGui.end();
     }
 
     private void spriteEditorMenuBar() {

@@ -3,6 +3,7 @@ package Core;
 import Core.Events.KeyListener;
 import Core.Events.MouseListener;
 import Core.ImGUI.ImGuiLayer;
+import Core.Renderer.Framebuffer;
 import Core.Scenes.LevelEditorScene;
 import Core.Scenes.LevelScene;
 import Utils.Debug;
@@ -21,6 +22,7 @@ public class Window {
     private String title;
     private long glfwWindow;
     private ImGuiLayer imguiLayer;
+    private Framebuffer framebuffer;
 
     public float r, g, b ,a;
     private boolean fadeToBlack;
@@ -33,9 +35,9 @@ public class Window {
         this.width = 1920;
         this.height = 1080;
         this.title = "Metal-Jv";
-        this.r = .1f;
-        this.g = .1f;
-        this.b = .1f;
+        this.r = .4f;
+        this.g = .4f;
+        this.b = .4f;
         this.a = 1f;
     }
 
@@ -134,6 +136,9 @@ public class Window {
         this.imguiLayer = new ImGuiLayer(glfwWindow);
         this.imguiLayer.initImGui();
 
+        this.framebuffer = new Framebuffer(1920, 1080);
+        glViewport(0, 0,1920, 1080);
+
 //        GLUtil.setupDebugMessageCallback();
 
         Window.changeScene(0);
@@ -152,13 +157,15 @@ public class Window {
 
             Debug.beginFrame();
 
+            this.framebuffer.bind();
             glClearColor(r, g, b, a);
             glClear(GL_COLOR_BUFFER_BIT);
-
             if(dt > 0) {
                 Debug.draw();
                 currentScene.update(dt);
             }
+
+            this.framebuffer.unbind();
 
             this.imguiLayer.update(dt, currentScene);
             glfwSwapBuffers(glfwWindow);
@@ -184,5 +191,13 @@ public class Window {
     }
     public static void setHeight(int newHeight){
         get().height = newHeight;
+    }
+
+    public static Framebuffer getFramebuffer() {
+        return get().framebuffer;
+    }
+
+    public static float getTargetAspectRatio() {
+        return 16.0f/9.0f;
     }
 }

@@ -4,6 +4,7 @@ import Core.Events.KeyListener;
 import Core.Events.MouseListener;
 import Core.Scene;
 import Core.Window;
+import Editor.GameViewWindow;
 import imgui.*;
 import imgui.callback.ImStrConsumer;
 import imgui.callback.ImStrSupplier;
@@ -112,7 +113,7 @@ public class ImGuiLayer {
                 ImGui.setWindowFocus(null);
             }
 
-            if(!io.getWantCaptureMouse()){
+            if(!io.getWantCaptureMouse() || GameViewWindow.getWantCaptureMouse()){
                 MouseListener.mouseButtonCallback(w, button, action, mods);
             }
         });
@@ -176,6 +177,7 @@ public class ImGuiLayer {
         setupDockSpace();
         currentScene.sceneImgui();
 //        ImGui.showDemoWindow();
+        GameViewWindow.imgui();
         ImGui.end();
         ImGui.render();
 
